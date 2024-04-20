@@ -1,0 +1,8 @@
+                    Nodemon
+
+Herramienta que reinicia la aplicacion de Node.js cuando detecta algún cambio 
+Para instalar usar el comando npm install -g nodemon
+La -g significa comando global.
+Luego para iniciar la aplicacion usamos < nodemon app.js >
+
+Pero... en el powershell no se puede ejecutar, hay que ir a la linea de comandos de Windows (command prompt)
