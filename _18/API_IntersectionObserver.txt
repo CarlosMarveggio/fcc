@@ -1,0 +1,13 @@
+              API
+
+interfaz de programacion de aplicaciones
+
+Intersection Observer
+
+Objeto para observar objetos...
+Utilidad, lazyLoad carga a medida que se scrolea
+
+const options = {
+  //rootMargin: "30px",   // para ver antes de tiempo o una vez que ya se ve un poco
+  threshold: [1]          // trabaja con las medidas, si cuenta cuando se ve entera o una parte
+}
