@@ -1,0 +1,47 @@
+              API
+
+interfaz de programacion de aplicaciones
+
+Web Workers 
+
+--- Objeto Navigator ---
+
+- NavigatorID
+
+- NavigatorLanguage
+
+- NavigatorOnLine
+
+- NavigatorContentUtils
+
+- NavigatorStorageUtils
+
+- NavigatorCookies
+
+- NavigatorConcurrentHardware
+
+- NavigatorPlugins
+
+- NavigatoruserMedia
+
+
+Propiedades estandar del Navegador
+interfaces:
+
+- NavigatorID.appCodeName
+  * Devuelve el nombre codigo interno del navegador actual. No siempre correcto
+
+- NavigatorID.aapName
+  * Nombre oficial del navegador. No siempre correcto
+
+- NavigatorID.appVersion
+  . No siempre correcto
+
+- NetworkInformation.connection
+  * provee objeto NetworkInformation
+
+- NavigatorGeolocation.geolocation
+
+- NavigatorConcurrentHardware.hardwareConcurrency
+  * Devuelve numero de nucleos de procesador logico disponibles
+

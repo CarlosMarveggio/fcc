@@ -1,0 +1,12 @@
+              API
+
+interfaz de programacion de aplicaciones
+
+Notification
+
+- Notification.requestPermission()
+
+- Notification.permission
+
+- Notifications(msg,options)
+

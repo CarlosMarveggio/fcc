@@ -1,0 +1,45 @@
+              API
+
+interfaz de programacion de aplicaciones
+
+Web Workers 
+
+Ayuda a manejar eventos cuando ya se está cumpliendo el tratamiento de un evento 
+
+Prueba: Si se ejecuta proceso que dure mucho tiempo como la carga de un video 
+(o un loop infinito), no se va a poder seleccionar texto o escribir en un input
+
+El archivo worker.js no tiene como base windows, está limitado... por lo que debe
+recibir parámetros para realizar ciertas tareas
+
+Tipos:
+  - Dedicated Workers
+  - Shared Worker
+  - Service Workers
+  - Abstract Workers
+
+Dedicated Worker:
+  - Worker() (Constructor)
+
+Parametro Options:
+  - type
+  - credentials
+  - name
+
+Metodo postMessage():
+  - Enviar mensajes entre web worker y el script principal
+
+Evento onmessage:
+  - Recibir mensajes entre web worker y el script principal
+
+Metodo terminate():
+  - Finaliza ejecucion de web worker
+
+Politica de origen cruzado:
+  - (Same-Origin)
+    Para que exista comunicacion debe tener mismo origen de URL:
+    http://localhost:80
+      |       |       |
+  protocolo   |       |
+            host      |
+                    puerto

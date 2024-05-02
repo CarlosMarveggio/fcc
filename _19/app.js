@@ -1,9 +1,9 @@
 "use strict";
 
-const publicaciones = document.querySelector('.publicaciones');
-let contador =0;
+const publicaciones = document.querySelector(".publicaciones");
+let contador = 0;
 
-const createPublicationCode = (nombreJS,content) => {
+const createPublicationCode = (nombreJS, content) => {
   const container = document.createElement("DIV");
   const comentarios = document.createElement("DIV");
   const nombre = document.createElement("H3");
@@ -30,19 +30,43 @@ const createPublicationCode = (nombreJS,content) => {
   container.appendChild(comentarios);
 
   return container;
+};
+
+// Si se observa la seccion que se pasa por parametro, se cargan 4 más
+const cargarMasPublis = entry => {
+  if(entry[0].isIntersecting) cargarPublicaciones(4);
 }
 
-const cargarPublicaciones = async num => {
+// El objeto de observacion, observa la funcion que se pasa
+const observer = new IntersectionObserver(cargarMasPublis);
+
+const cargarPublicaciones = async (num) => {
   const request = await fetch("LazyLoad.txt");
   const content = await request.json();
   const arr = content.content;
   const documentFragment = document.createDocumentFragment();
   for (let i = 0; i < num; i++) {
-    const newPublicacion = createPublicationCode(arr[contador].nombre,arr[contador].contenido);
-    documentFragment.appendChild(newPublicacion);
-    contador++;
+    if (arr[contador] != undefined) {
+      const newPublicacion = createPublicationCode(
+        arr[contador].nombre,
+        arr[contador].contenido
+      );
+      documentFragment.appendChild(newPublicacion);
+      contador++;
+      // si el contador llega al final, se pasa al observador la ultima publicacion
+      if (i == num-1) observer.observe(newPublicacion);
+    } else {
+      if (publicaciones.lastElementChild.id != "noMore") {
+        let noMore = document.createElement("h3");
+        noMore.textContent = "No hay más publicaciones";
+        noMore.id = "noMore";
+        documentFragment.appendChild(noMore);
+        publicaciones.appendChild(documentFragment);
+        break; 
+      }
+    }
   }
   publicaciones.appendChild(documentFragment);
-}
+};
 
 cargarPublicaciones(5);

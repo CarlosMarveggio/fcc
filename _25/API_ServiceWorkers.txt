@@ -1,0 +1,20 @@
+              API
+
+interfaz de programacion de aplicaciones
+
+Web Workers 
+
+--- ServiceWorkers ---
+
+Archivo que captura las peticiones dirigidas a un servidor para procesarlas
+La respuesta del servidor web tambien pasa por el service worker
+
+Escucha muchos eventos
+
+ServiceWorker lifeCycle: 
+
+- metodo register()
+- enviar mensajes con postMessage()
+- evento Fecth
+- Registrar cache y mostrar sitio web offline
+- Chat Realtime

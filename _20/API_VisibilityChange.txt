@@ -1,0 +1,11 @@
+              API
+
+interfaz de programacion de aplicaciones
+
+Visibility Change
+
+event Visibilitychange:
+  Cuando se cambia de pestaña cambia el valor de la propiedad visibilityState de
+  visible a hiden y visceversa
+
+Utilidad: por ejemplo pausar un video o juego, si se cambia de pestaña

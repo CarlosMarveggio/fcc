@@ -1,0 +1,31 @@
+              API
+
+interfaz de programacion de aplicaciones
+
+Web Workers 
+
+--- Caché ---
+
+Trabaja con promesas. 
+Es una memoria a corto plazo.
+
+Métodos:
+
+add: ƒ add()
+  - Agrega una URL que se le pase como parametro
+
+addAll: ƒ addAll()
+  - Agrega a la cache los archivos pasados por parametro en forma de array
+
+delete: ƒ delete()
+
+keys: ƒ keys()
+
+match: ƒ match()
+  - Devuelve una promesa (la resolucion). Es como el query selector
+
+matchAll: ƒ matchAll()
+  - Devuelve un arreglo de promesas.
+
+put: ƒ put()
+
